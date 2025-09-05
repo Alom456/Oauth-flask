@@ -74,10 +74,12 @@ def callback():
     r = requests.post(token_url, data=data)
     tokens = r.json()
 
+    print("TOKENS:", json.dumps(tokens, indent=2))
+
     with open("tokens.json", "w") as f:
         json.dump(tokens, f, indent=2)
 
-    return f"Tokens saved: {tokens}"
+    return f"<pre>{json.dumps(tokens, indent=2)}</pre>"
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
