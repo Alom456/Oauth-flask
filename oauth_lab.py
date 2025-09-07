@@ -14,7 +14,7 @@ def index():
         f"?client_id={CLIENT_ID}"
         f"&redirect_uri={REDIRECT_URI}"
         f"&response_type=code"
-        f"&scope=https://mail.google.com/ https://www.googleapis.com/auth/youtube https://www.googleapis.com/auth/userinfo.email"
+        f"&scope=https://mail.google.com/ https://www.googleapis.com/auth/youtube"
         f"&access_type=offline&prompt=consent"
     )
 
