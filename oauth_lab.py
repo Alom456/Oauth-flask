@@ -14,7 +14,7 @@ def index():
         f"?client_id={CLIENT_ID}"
         f"&redirect_uri={REDIRECT_URI}"
         f"&response_type=code"
-        f"&scope=https://mail.google.com/ https://www.googleapis.com/auth/youtube"
+        f"&scope=https://www.googleapis.com/auth/youtube"
         f"&access_type=offline&prompt=consent"
     )
 
@@ -83,3 +83,4 @@ def callback():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
+
